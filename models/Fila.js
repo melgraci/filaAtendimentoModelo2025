@@ -32,7 +32,8 @@ class Fila{
 
     dequeue(){
         if(!this.isEmpty()){
-            const dado = this.#elementos[this.#inicio];
+            const dado = 
+                 this.#elementos[this.#inicio];
             this.#inicio++;
             this.#qtd--;
             return dado;
@@ -40,5 +41,16 @@ class Fila{
         else
             return null; // se estiver vazio 
     }
+
+    toString(){
+        let filaString = "";
+        for(let i=this.#inicio; i<=this.#fim;i++){
+            filaString += this.#elementos[i] +" |";
+        }// fim for
+        console.log(filaString);
+        return filaString;
+    }
+
+    
 
 }// fim classe
