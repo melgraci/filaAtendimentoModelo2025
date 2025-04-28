@@ -15,7 +15,13 @@ function addElemento(){
 //-----------------------------------
 function mostrarFila(){
    const listaFila = document.getElementById("listFila");
-   listaFila.textContent = minhaFila.toString();
+   //listaFila.textContent = minhaFila.toString();
+   listaFila.innerHTML = ""; // limpa a lista
+   for(let item of minhaFila){
+      const listaElemento = document.createElement("li");
+      listaElemento.textContent = item;
+      listaFila.appendChild(listaElemento);
+   }
 }
 
 //-----------------------------
