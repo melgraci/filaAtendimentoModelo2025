@@ -4,6 +4,9 @@ function addElemento(){
     const novoElemento = 
        document.getElementById("txtnovoNome");
     if(!minhaFila.isFull()){
+       //const novoAtendimento = new Atendimento();
+       // setar valor do objeto atendimento e inserir na fila
+
        minhaFila.enqueue(novoElemento.value);
        mostrarFila();
        novoElemento.value = ""; // limpa
