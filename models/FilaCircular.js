@@ -1,5 +1,5 @@
 //FilaCircular.js
-class Fila{ 
+class FilaCircular{ 
     #inicio; //# privados
     #fim;
     #qtd;
@@ -12,19 +12,23 @@ class Fila{
     }
     
     isFull(){
-     return this.#fim === 
-             this.#elementos.length - 1;            
+     return this.#qtd === 
+             this.#elementos.length;            
     }
 
     isEmpty(){
-        return this.#fim < this.#inicio; 
+        return this.#qtd===0; 
     }
 
     enqueue(dado){
         if(!this.isFull()){
-            this.#fim++;
+            if(this.#fim === this.#elementos.length-1)
+                this.#fim = 0;
+            else
+                this.#fim++;
             this.#elementos[this.#fim] = dado;
             this.#qtd++;
+            console.log("Inicio:"+ this.#inicio + " Fim:"+ this.#fim + " Qtd:"+ this.#qtd);
             return true;
         }// fim if
         else
@@ -35,8 +39,14 @@ class Fila{
         if(!this.isEmpty()){
             const dado = 
                  this.#elementos[this.#inicio];
-            this.#inicio++;
+            
+            if(this.#inicio === this.#elementos.length-1)
+                this.#inicio = 0;
+            else
+                this.#inicio++;
             this.#qtd--;
+            console.log("Inicio: "+ this.#inicio + " Fim:"+ this.#fim + " Qtd:"+ this.#qtd);
+
             return dado;
         }// fim if
         else
@@ -45,14 +55,38 @@ class Fila{
 
     toString(){
         let filaString = "";
-        for(let i=this.#inicio; i<=this.#fim;i++){
-            filaString += this.#elementos[i] +" |";
+        let pos = this.#inicio;
+        for(let i=0; i<this.#qtd;i++){
+            filaString += this.#elementos[pos] + " |";
+            if(pos === this.#elementos.length-1)
+                pos = 0;
+            else
+                pos++;
+            
         }// fim for
+        
         console.log(filaString);
         return filaString;
     }
-    
-
-    
+    [Symbol.iterator](){
+        let pos = this.#inicio;
+        let cont = 0;
+        const total = this.#qtd;
+        return {
+            next: () => {
+                if(cont < total){
+                    const dado = this.#elementos[pos];
+                    if(pos === this.#elementos.length-1)
+                        pos = 0;
+                    else
+                        pos++;
+                    cont++;
+                    return {value: dado, done: false};
+                }
+                else
+                    return {done: true};
+            }
+        };
+    }// fim iterator  
 
 }// fim classe
