@@ -1,44 +1,75 @@
-# 📋 Fila de Atendimento em JavaScript
+📋 Sistema de Controle de Atendimento em JavaScript Atualizado ✅
 
-Este projeto implementa uma estrutura de **fila (Queue)** em JavaScript utilizando programação orientada a objetos. A fila é uma estrutura de dados do tipo **FIFO** (*First In, First Out*), onde o primeiro elemento inserido é o primeiro a ser removido.
+Este projeto foi desenvolvido como parte das atividades da disciplina de Programação Orientada a Objetos,onde foi implementado uma estrutura de fila (Queue) com recursos extras para buscar por CPF e mostar data e hora quando for atendido alguém.
 
-## 📌 Descrição
+📌 Descrição
+O sistema tem como uma simulação de uma fila de atendimento usando POO em JavaScript. Essa fila segue a lógica FIFO (First In, First Out), onde o primeiro elemento a entrar é o primeiro a ser atendido.
 
-A classe `Fila` permite simular uma fila de atendimento com um tamanho fixo, controlando os elementos inseridos e removidos de maneira sequencial. Os métodos implementados possibilitam realizar operações comuns em filas, como inserir, remover e verificar elementos.
+Nessa estrutura foi se implementado funcionalidades adicionais para melhorar o controle da fila e a experiência do usuário final.
 
-## 🔧 Funcionalidades
+🔧 Funcionalidades: 
 
-- **Criação da fila com tamanho fixo**: define o número máximo de elementos que a fila pode armazenar.
-- **Inserção de elementos (enqueue)**: adiciona um novo item no final da fila, se houver espaço disponível.
-- **Remoção de elementos (dequeue)**: remove o item do início da fila, liberando espaço para novos elementos.
-- **Verificação de fila cheia**: identifica se o limite de armazenamento foi atingido.
-- **Verificação de fila vazia**: identifica se não há elementos na fila.
-- **Visualização do primeiro elemento**: retorna o item que está no início da fila, sem removê-lo.
-- **Exibição da fila como string**: permite visualizar todos os elementos presentes na fila em ordem.
+Criação da fila com tamanho fixo. 
 
-## 🚀 Como Usar
+Inserção de elementos (enqueue) com nome, CPF, data e hora.
 
-Para utilizar a fila, basta instanciar a classe com o tamanho desejado e utilizar os métodos disponíveis para gerenciar os elementos.
+Remoção de elementos (dequeue) com registro da hora de saída e cálculo do tempo na fila.
 
-## 💡 Aplicações
+🧍‍♂️🧍‍♀️🧍 Busca de atendimento por nome.
 
-Esta estrutura pode ser utilizada em diversos contextos, como:
-- Simulação de filas de atendimento (bancos, hospitais, etc.)
-- Sistemas de impressão
-- Controle de tarefas em ordem de chegada
-- Buffers de dados
+✅ Busca por CPF (Que foi editado por mim).
 
-## 📚 Conceitos Envolvidos
+✅ Exibição da fila em tempo real na interface.
 
-- Estrutura de Dados: Fila (Queue)
-- Programação Orientada a Objetos (POO)
-- Controle de fluxo e manipulação de arrays
-- Lógica de controle de índices (`início`, `fim` e quantidade de elementos)
+✅ Personalização das cores da interface. 
 
-## 👨‍🏫 Objetivo Educacional
+✅ Mensagens de alerta para informar quando a fila ficar cheia ou se o atendimento foi concluído.
 
-Este projeto tem como finalidade o ensino de estruturas de dados básicas com foco em aplicação prática por meio de linguagem de programação moderna e amplamente utilizada.
+🚀 Como Usar:
 
-## 🧑‍💻 Autor
+PASSO 1:
+Preencha o nome e o CPF no formulário.
 
-Projeto desenvolvido para fins didáticos no IFSULDEMINAS - Campus Machado.
+PASSO 2:
+Clique em "Adicionar à fila".
+
+PASSO 3:
+Para atender a próxima pessoa, clique em "Atender".
+
+PASSO 4:
+Para buscar uma pessoa pelo CPF, clique em "Buscar por CPF" e digite o número que deseja.
+
+A lista de pessoas na fila é atualizada automaticamente.
+
+💡 Aplicações:
+
+Este sistema pode ser usado em:
+
+Atendimento ao cliente (bancos, hospitais, eventos, filas em geral)
+
+
+📚 Conceitos Envolvidos
+
+Estrutura de Dados: Fila Circular
+
+Programação Orientada a Objetos (POO) em JavaScript
+
+Uso de eventos e alertas na interface
+
+👨‍🎓 Desenvolvimento
+
+Projeto desenvolvido por Melissa Graciano Ferreira como atividade prática do curso no IFSULDEMINAS - Campus Machado.
+
+Melhorias que implementadas:
+
+##Busca por CPF.
+
+##Alteração das cores.
+
+##Exibição do tempo que cada pessoa ficou na fila.
+
+##Autor Original (Matheus Franco)
+
+
+
+
