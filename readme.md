@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como parte das atividades da disciplina de Program
 
 ⭐Descrição
 
-O sistema tem como uma simulação de uma fila de atendimento usando POO em JavaScript. Essa fila segue a lógica FIFO (First In, First Out), onde o primeiro elemento a entrar é o primeiro a ser atendido. Nessa estrutura foi se implementado algumas funcionalidades adicionais para melhorar o controle da fila, para que o usuário tenha uma boa experiência final.
+O sistema tem como uma simulação de uma fila de atendimento usando POO em JavaScript. Essa fila segue a lógica FIFO (First In, First Out), onde o primeiro elemento a entrar é o primeiro a ser atendido. Nessa estrutura foi se implementado algumas funcionalidades adicionais para melhorar o controle do fila, para que o usuário tenha uma boa experiência final.
 
 ⭐Funcionalidades: 
 
